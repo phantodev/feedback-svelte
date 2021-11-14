@@ -9,11 +9,11 @@
     }
 </script>
 
-<Card>
+<Card listItem={"padding-item"}>
     <div class="num-display">
         {item.rating}
       </div>
-      <button class="close" on:click={() => handleDelete(item.id)}>X</button>
+      <!-- <button class="close" on:click={() => handleDelete(item.id)}>X</button> -->
       <p class="text-display">
         {item.text}
       </p>
@@ -27,20 +27,29 @@
       left: -10px;
       width: 50px;
       height: 50px;
-      background: #ff6a95;
+      background: #ff3e00;
       color: #fff;
-      border: 1px #eee solid;
       border-radius: 50%;
       padding: 10px;
       text-align: center;
       font-size: 19px;
     }
-    .close {
+    /* .close {
       position: absolute;
       top: 10px;
       right: 20px;
       cursor: pointer;
       background: none;
       border: none;
+    } */
+    .text-display{
+      font-size: 14px;
+      text-align: center;
     }
+    /* @media (min-width: 768px){
+      .text-display{
+        font-size: 14px;
+        text-align: center;
+      }
+    } */
   </style>

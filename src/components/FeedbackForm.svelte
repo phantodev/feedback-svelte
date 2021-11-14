@@ -37,12 +37,12 @@
 
 <Card>
     <header>
-        <h2>How would you rate your service with us?</h2>
+        <h2>Dê uma nota e um feedback sobre a nova linguagem Svelte!</h2>
     </header>
     <RatingSelect on:rating-select={handleSelect}/>
     <form on:submit|preventDefault={handleSubmit}>
         <div class="input-group">
-            <input type="text" on:input={handleInput} bind:value = {text} placeholder="Tell us something tips">
+            <input type="text" on:input={handleInput} bind:value = {text} placeholder="Escreva sua opinião aqui...">
             <Button disabled={btnDisabled} type="submit">Send</Button>
         </div>
         {#if message}

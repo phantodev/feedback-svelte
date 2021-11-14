@@ -66,6 +66,43 @@
     .rating li {
       position: relative;
       background: #f4f4f4;
+      width: 30px;
+      height: 30px;
+      padding: 5px;
+      text-align: center;
+      border-radius: 50%;
+      font-size: 14px;
+      border: 1px #eee solid;
+      transition: 0.3s;
+    }
+    .rating li label {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 30px;
+      height: 30px;
+      padding: 5px;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      cursor: pointer;
+    }
+    .rating li:hover {
+      background: #ff3e00;
+      color: #fff;
+    }
+    /* Make actual radio select invisible */
+    [type='radio'] {
+      opacity: 0;
+    }
+    /* Use the sibling select */
+    [type='radio']:checked ~ label {
+      background: #ff3e00;
+      color: #fff;
+    }
+    @media (min-width: 768px){
+      .rating li {
+      position: relative;
+      background: #f4f4f4;
       width: 50px;
       height: 50px;
       padding: 10px;
@@ -86,17 +123,5 @@
       transform: translate(-50%, -50%);
       cursor: pointer;
     }
-    .rating li:hover {
-      background: #ff6a95;
-      color: #fff;
-    }
-    /* Make actual radio select invisible */
-    [type='radio'] {
-      opacity: 0;
-    }
-    /* Use the sibling select */
-    [type='radio']:checked ~ label {
-      background: #ff6a95;
-      color: #fff;
     }
   </style>
